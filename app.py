@@ -49,6 +49,7 @@ def plot_pairs(df_percentage_change, year1, year2):
     plt.xticks(rotation=45)
     plt.tight_layout()
     st.pyplot(plt)
+    st.write("Click Top right of the plot to enlarge it")
 
 
 # Streamlit app
