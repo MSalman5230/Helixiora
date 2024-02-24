@@ -11,7 +11,7 @@ def get_df_year_filter(df, year1, year2):
     df = df[df["date"].isin(selected_dates)]
     num_rows = df.shape[0]
     num_col = df.shape[1]
-    i = 0 + 1
+
     # while i<num_rows-1:
     for i in range(1, num_rows):
         print(i)
@@ -21,7 +21,6 @@ def get_df_year_filter(df, year1, year2):
             df.iloc[i, j] = (
                 (df.iloc[i, j] - df.iloc[i - 1, j]) / abs(df.iloc[i - 1, j]) * 100
             )
-        i += 1
 
     df.set_index("date", inplace=True)
     df_percentage_change = df.T.reset_index()
